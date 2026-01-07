@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Viajes al Polo Norte</title>
+  <style>
+    :root{
+      --bg:#f6f8fc;
+      --card:#ffffff;
+      --text:#0f172a;
+      --muted:#64748b;
+      --line: rgba(148,163,184,.30);
+      --shadow: 0 14px 34px rgba(15,23,42,.10);
+      --shadow2: 0 18px 44px rgba(15,23,42,.14);
+      --radius: 18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 700px at 20% 0%, #e9f6ff 0%, transparent 60%),
+        radial-gradient(900px 700px at 85% 15%, #efe9ff 0%, transparent 55%),
+        var(--bg);
+    }
+    .wrap{max-width:1100px;margin:0 auto;padding:26px 16px 42px}
+    header{margin-bottom:14px}
+    h1{
+      margin:0;
+      font-size: clamp(22px, 3vw, 30px);
+      letter-spacing:-.02em;
+    }
+    .sub{margin:8px 0 0;color:var(--muted);font-size:13px;max-width:72ch}
+
+    .gallery{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap:16px;
+      list-style:none;
+      padding:0;
+      margin:18px 0 0;
+    }
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+    .card:hover{
+      transform: translateY(-4px);
+      box-shadow:var(--shadow2);
+    }
+    .card a{
+      display:block;
+      text-decoration:none;
+      color:inherit;
+    }
+    .thumb{
+      aspect-ratio: 16 / 9;
+      background:#e2e8f0;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+      transform: scale(1.01);
+      transition: transform .25s ease;
+    }
+    .card:hover .thumb img{transform: scale(1.06)}
+    figcaption{
+      padding:12px 12px 14px;
+      border-top:1px solid rgba(148,163,184,.22);
+    }
+    .title{
+      margin:0 0 6px;
+      font-weight:800;
+      font-size:14px;
+      line-height:1.25;
+    }
+    .hint{
+      margin:0;
+      color:var(--muted);
+      font-size:12.5px;
+    }
+    a:focus-visible{
+      outline: 3px solid rgba(2,132,199,.25);
+      outline-offset: 4px;
+      border-radius: calc(var(--radius) + 6px);
+    }
+    @media (prefers-reduced-motion: reduce){
+      .card, .thumb img{transition:none}
+      .card:hover{transform:none}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Viajes al Polo Norte</h1>
+      <p class="sub">Haz clic en una imagen para abrir su archivo HTML (en esta misma carpeta).</p>
+    </header>
+
+    <ul class="gallery" aria-label="Galería Viajes al Polo Norte">
+      <li class="card">
+        <a href="01-la-primera-expedicion-al-Polo-Norte.html">
+          <figure style="margin:0">
+            <div class="thumb">
+              <img src="01-la-primera-expedicion-al-Polo-Norte.jpg" alt="01 La primera expedición al Polo Norte">
+            </div>
+            <figcaption>
+              <p class="title">01 la primera expedición al Polo Norte</p>
+
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+
+      <li class="card">
+        <a href="02-Encuentro-con-los-inuit.html">
+          <figure style="margin:0">
+            <div class="thumb">
+              <img src="02-Encuentro-con-los-inuit.jpg" alt="02 Relato Encuentro con los inuit">
+            </div>
+            <figcaption>
+              <p class="title">02 Relato Encuentro con los inuit</p>
+
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+
+      <li class="card">
+        <a href="03-Auroras-boreales.html">
+          <figure style="margin:0">
+            <div class="thumb">
+              <img src="03-Auroras-boreales.jpg" alt="03 Auroras boreales">
+            </div>
+            <figcaption>
+              <p class="title">03 Auroras boreales</p>
+
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+
+      <li class="card">
+        <a href="04-El-deshielo.html">
+          <figure style="margin:0">
+            <div class="thumb">
+              <img src="04-El-deshielo.jpg" alt="04 El deshielo">
+            </div>
+            <figcaption>
+              <p class="title">04 El deshielo</p>
+
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+
+      <li class="card">
+        <a href="05-Fauna-artica.html">
+          <figure style="margin:0">
+            <div class="thumb">
+              <img src="05-Fauna-artica.jpg" alt="05 Fauna ártica">
+            </div>
+            <figcaption>
+              <p class="title">05 Fauna ártica</p>
+
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+
+      <li class="card">
+        <a href="06-Tormentas-gelidas.html">
+          <figure style="margin:0">
+            <div class="thumb">
+              <img src="06-Tormentas-gelidas.jpg" alt="06 Tormentas gélidas">
+            </div>
+            <figcaption>
+              <p class="title">06 Tormentas gélidas</p>
+
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+
+      <li class="card">
+        <a href="07-Exploradores-legendarios.html">
+          <figure style="margin:0">
+            <div class="thumb">
+              <img src="07-Exploradores-legendarios.jpg" alt="07 Exploradores legendarios">
+            </div>
+            <figcaption>
+              <p class="title">07 Exploradores legendarios</p>
+
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+
+      <li class="card">
+        <a href="08-Vida-en-un-rompehielos.html">
+          <figure style="margin:0">
+            <div class="thumb">
+              <img src="08-Vida-en-un-rompehielos.jpg" alt="08 Vida en un rompehielos">
+            </div>
+            <figcaption>
+              <p class="title">08 Vida en un rompehielos</p>
+
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+
+      <li class="card">
+        <a href="09-Islas-del-Artico.html">
+          <figure style="margin:0">
+            <div class="thumb">
+              <img src="09-Islas-del-Artico.jpg" alt="09 Islas del Ártico">
+            </div>
+            <figcaption>
+              <p class="title">09 Islas del Ártico</p>
+
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+
+      <li class="card">
+        <a href="10-La-soledad-blanca.html">
+          <figure style="margin:0">
+            <div class="thumb">
+              <img src="10-La-soledad-blanca.jpg" alt="10 La soledad blanca">
+            </div>
+            <figcaption>
+              <p class="title">10 La soledad blanca</p>
+
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+
+      <li class="card">
+        <a href="11-Cientificos-en-el-hielo.html">
+          <figure style="margin:0">
+            <div class="thumb">
+              <img src="11-Cientificos-en-el-hielo.jpg" alt="11 Científicos en el hielo">
+            </div>
+            <figcaption>
+              <p class="title">11 Científicos en el hielo</p>
+
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+
+      <li class="card">
+        <a href="12-El-misterio-del-Sol-de-medianoche.html">
+          <figure style="margin:0">
+            <div class="thumb">
+              <img src="12-El-misterio-del-Sol-de-medianoche.jpg" alt="12 El misterio del Sol de medianoche">
+            </div>
+            <figcaption>
+              <p class="title">12 El misterio del Sol de medianoche</p>
+
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+
+      <li class="card">
+        <a href="13-Sobrevivir-al-frio-extremo.html">
+          <figure style="margin:0">
+            <div class="thumb">
+              <img src="13-Sobrevivir-al-frio-extremo.jpg" alt="13 Sobrevivir al frío extremo">
+            </div>
+            <figcaption>
+              <p class="title">13 Sobrevivir al frío extremo</p>
+
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+
+      <li class="card">
+        <a href="14-Hielo-eterno.html">
+          <figure style="margin:0">
+            <div class="thumb">
+              <img src="14-Hielo-eterno.jpg" alt="14 Hielo eterno">
+            </div>
+            <figcaption>
+              <p class="title">14 Hielo eterno</p>
+
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+
+      <li class="card">
+        <a href="15-Leyendas-del-Artico.html">
+          <figure style="margin:0">
+            <div class="thumb">
+              <img src="15-Leyendas-del-Artico.jpg" alt="15 Leyendas del Ártico">
+            </div>
+            <figcaption>
+              <p class="title">15 Leyendas del Ártico</p>
+
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+
+      <li class="card">
+        <a href="16-La-caza-del-hielo-azul.html">
+          <figure style="margin:0">
+            <div class="thumb">
+              <img src="16-La-caza-del-hielo-azul.jpg" alt="16 La caza del hielo azul">
+            </div>
+            <figcaption>
+              <p class="title">16 La caza del hielo azul</p>
+
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+
+      <li class="card">
+        <a href="17-Rutas-inexploradas.html">
+          <figure style="margin:0">
+            <div class="thumb">
+              <img src="17-Rutas-inexploradas.jpg" alt="17 Rutas inexploradas">
+            </div>
+            <figcaption>
+              <p class="title">17 Rutas inexploradas</p>
+
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+
+      <li class="card">
+        <a href="18-El-impacto-humano.html">
+          <figure style="margin:0">
+            <div class="thumb">
+              <img src="18-El-impacto-humano.jpg" alt="18 El impacto humano">
+            </div>
+            <figcaption>
+              <p class="title">18 El impacto humano</p>
+
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+
+      <li class="card">
+        <a href="19-Viajes-en-trineos-de-perros.html">
+          <figure style="margin:0">
+            <div class="thumb">
+              <img src="19-Viajes-en-trineos-de-perros.jpg" alt="19 Viajes en trineos de perros">
+            </div>
+            <figcaption>
+              <p class="title">19 Viajes en trineos de perros</p>
+
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+
+      <li class="card">
+        <a href="20-Regreso-al-hogar.html">
+          <figure style="margin:0">
+            <div class="thumb">
+              <img src="20-Regreso-al-hogar.jpg" alt="20 Regreso al hogar">
+            </div>
+            <figcaption>
+              <p class="title">20 Regreso al hogar</p>
+
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>
